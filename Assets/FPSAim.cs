@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FPSAim : MonoBehaviour {
-
+    //Definimos variables
     float mouseX;
     float mouseY;
     public bool IntervedMouse;
@@ -15,6 +15,7 @@ public class FPSAim : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        //ESTO FUE LO QUE HICE A LO LARGO DEL DOCUMENTO EN ESTE MISMO SCRIPT
         //   Vector3 mousePosition = Input.mousePosition;
         //Debug.Log(mousePosition);
         //float mouseX = mousePosition.x;
@@ -25,6 +26,8 @@ public class FPSAim : MonoBehaviour {
         //  Debug.Log(transform.localEulerAngles);
         //  transform.eulerAngles = new Vector3(mouseY, 0, 0);
         //mouseY += Input.GetAxis("Mouse Y");
+
+        //Movimiento del mouse
         mouseX += Input.GetAxis("Mouse X");
         if (IntervedMouse)
         {
@@ -36,7 +39,7 @@ public class FPSAim : MonoBehaviour {
         }
         Debug.Log(mouseX);
 
-       
+       //la rotacion
         transform.eulerAngles = new Vector3(mouseY, mouseX, 0);
 
     }

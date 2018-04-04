@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FPSMove : MonoBehaviour {
 
+    //Definimos una velocidad
 	public float speed = 0.1f;
 	// Use this for initialization
 	void Start () {
@@ -12,6 +13,7 @@ public class FPSMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //Definimos los movimientos en el teclado
         if (Input.GetKey(KeyCode.W))
         {
 			transform.position += transform.forward*speed;
